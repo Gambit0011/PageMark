@@ -32,6 +32,11 @@ app.post('/save', (req, res) => {
   // Append new data
   const newRow = [link, comment];
   XLSX.utils.sheet_add_aoa(worksheet, [newRow], { origin: -1 });
+// XLSX.utils.sheet_add_aoa(worksheet, [newRow], { origin: -1, hyperlink: link });
+ // Format the cell containing the link as a hyperlink
+ const range = XLSX.utils.decode_range(worksheet['!ref']);
+ const cellRef = XLSX.utils.encode_cell({ r: range.e.r, c: 0 }); // Get the reference to the last inserted row
+ worksheet[cellRef].l = { Target: link, Tooltip: link }; // Set hyperlink for the cell
 
   // Write to file
   XLSX.writeFile(workbook, 'links.xlsx');
