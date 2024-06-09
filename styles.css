@@ -1,0 +1,80 @@
+/* body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label {
+    margin-top: 10px;
+  }
+  
+  input {
+    margin-top: 5px;
+    width: 80%;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+   */
+   body {
+    font-family: Arial, sans-serif;
+    height: 300px;
+    width: 300px;
+    /* display: flex; */
+    align-items: start;
+  }
+  
+  h1 {
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label {
+    margin-top: 10px;
+  }
+  
+  input {
+    margin-top: 10px; /* Increased margin for spacing */
+    width: 90%; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+  }
+  
+  
+  button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
