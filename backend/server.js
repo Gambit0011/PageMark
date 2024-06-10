@@ -38,6 +38,8 @@ app.post('/save', (req, res) => {
  const cellRef = XLSX.utils.encode_cell({ r: range.e.r, c: 0 }); // Get the reference to the last inserted row
  worksheet[cellRef].l = { Target: link, Tooltip: link }; // Set hyperlink for the cell
 
+   // Set the column widths (preserve existing widths or set default)
+   worksheet['!cols'] = worksheet['!cols'] || [{ wpx: 300 }, { wpx: 300 }];
   // Write to file
   XLSX.writeFile(workbook, 'links.xlsx');
 
