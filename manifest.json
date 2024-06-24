@@ -7,6 +7,11 @@
       "activeTab",
       "storage"
     ],
+    "icons" :{
+      "16": "icon1.png",
+      "48": "icon1.png",
+      "128": "icon1.png"
+    },
     "background": {
       "service_worker": "background.js"
     },
