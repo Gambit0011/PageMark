@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Coding Link Saver",
+    "name": "PageMark",
     "version": "1.0",
     "description": "Save coding question links and explanations to an Excel sheet",
     "permissions": [
