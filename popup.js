@@ -1,4 +1,4 @@
-  document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('saveLinkForm');
   const changeFileButton = document.getElementById('changeFileButton');
 
@@ -20,15 +20,17 @@
 
     const link = document.getElementById('link').value;
     const comment = document.getElementById('comment').value;
+    const supportingLink = document.getElementById('supportingLink').value;
+    const tag = document.getElementById('tag').value;
 
     // Retrieve the filename from storage
     chrome.storage.sync.get(['filename'], function(result) {
       const filename = result.filename;
 
       // Send data to background script for saving to Excel
-      chrome.runtime.sendMessage({ link, comment, filename }, function(response) {
+      chrome.runtime.sendMessage({ link, comment, supportingLink, tag, filename }, function(response) {
         if (response.status === 'Data saved successfully!') {
-          alert('Link and comment saved!');
+          alert('Link, comment, supporting link, and tag saved!');
         } else {
           alert(`Error: ${response.message}`);
         }

@@ -1,25 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>BookMark</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>BookMark</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Bookmark</h1>
-    <form id="saveLinkForm">
-      <label for="link">Link:</label>
-      <input type="text" id="link" name="link" readonly>
+    <div class="container">
+        <h1>Bookmark</h1>
+        <form id="saveLinkForm">
+            <label for="link">Link</label>
+            <input type="text" id="link" readonly>
+            <label for="comment">Description</label>
+            <textarea id="comment"></textarea>
+            <label for="supportingLink">Supporting Link</label>
+            <input type="text" id="supportingLink">
+            <label for="tag">Tag</label>
+            <input type="text" id="tag">
+            <div class="button-container">
+                <button type="submit">Save Link</button>
+                <button type="button" id="changeFileButton">Change File</button>
+            </div>
+        </form>
+    </div>
 
-      <label for="comment">Description:</label>
-      <textarea id="comment" name="comment"></textarea>
-
-      <div class="button-container">
-        <button type="submit" id="saveButton">Save</button>
-        <button type="button" id="changeFileButton">Change File</button>
-      </div>
-    </form>
-  </div>
-  <script src="popup.js"></script>
+    <script src="popup.js"></script>
 </body>
 </html>

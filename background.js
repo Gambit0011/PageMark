@@ -1,5 +1,5 @@
   chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-  const { link, comment, filename } = request;
+    const { link, comment, supportingLink, tag, filename } = request;
 
   const apiUrl = 'http://localhost:3000/save';
 
@@ -8,7 +8,7 @@
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ link, comment, filename }),
+    body: JSON.stringify({ link, comment, supportingLink, tag, filename }),
   })
   .then(response => response.json())
   .then(data => {
@@ -23,5 +23,5 @@
     sendResponse({ status: 'Error saving data.', message: error.message });
   });
 
-  return true; // Indicate that the response is sent asynchronously
+  return true; // Indicate that the response is sent asynchronouslyy
 });
